@@ -11,6 +11,9 @@
 # production
 /build
 
+# vscode
+.stylelintrc
+
 # misc
 .DS_Store
 .env.local
