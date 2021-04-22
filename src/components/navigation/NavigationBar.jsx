@@ -4,11 +4,13 @@ import NavigationTitle from "./NavigationTitle";
 
 export default function NavigationBar() {
   return (
-    <div>
+    <div className="fixed flex justify-between items-center w-screen h-32 px-14">
       <NavigationTitle>David Bechara</NavigationTitle>
-      {sections.map(({ title }) => (
-        <NavigationItem>{title}</NavigationItem>
-      ))}
+      <div className="flex">
+        {sections.map(({ title }) => (
+          <NavigationItem key={title}>{title}</NavigationItem>
+        ))}
+      </div>
     </div>
   );
 }

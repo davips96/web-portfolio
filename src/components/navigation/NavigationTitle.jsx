@@ -1,3 +1,3 @@
 export default function NavigationTitle({ children }) {
-  return <div>{children}</div>;
+  return <div className="text-3xl">{children}</div>;
 }
