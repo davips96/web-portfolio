@@ -8,12 +8,12 @@ const sections = [
     component: AboutSection,
   },
   {
-    title: "Contact",
-    component: ContactSection,
-  },
-  {
     title: "Resume",
     component: ResumeSection,
+  },
+  {
+    title: "Contact",
+    component: ContactSection,
   },
 ];
 
