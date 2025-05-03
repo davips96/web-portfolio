@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Bechara;David;;;
+FN:David Bechara
+TITLE:Lead Frontend Developer
+EMAIL;type=INTERNET;type=WORK:davbechara96@gmail.com
+TEL;type=CELL:+15149619291
+ADR;type=WORK:;;Montreal;QC;;;Canada
+URL:https://www.davidbechara.ca
+END:VCARD 
