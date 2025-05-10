@@ -57,7 +57,7 @@ type EducationCardProps = {
 
 const EducationCard = ({ education, delay }: EducationCardProps) => {
   return (
-    <div className="card card-hover p-8 animate-fade-in" style={{ animationDelay: `${delay}s` }}>
+    <div className="card p-8 animate-fade-in" style={{ animationDelay: `${delay}s` }}>
       <h3 className="text-lg font-semibold mb-2">{education.school}</h3>
       <p className="text-gray-300 mb-1">{education.degree}</p>
       {education.period && <p className="text-sm text-gray-500">{education.period}</p>}

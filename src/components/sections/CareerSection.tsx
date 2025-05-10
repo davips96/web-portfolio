@@ -7,7 +7,7 @@ type ExperienceCardProps = {
 
 const ExperienceCard = ({ experience, delay }: ExperienceCardProps) => {
   return (
-    <div className="card card-hover animate-fade-in" style={{ animationDelay: `${delay}s` }}>
+    <div className="card animate-fade-in" style={{ animationDelay: `${delay}s` }}>
       <div className="flex flex-col md:flex-row gap-10">
         {/* Company Info */}
         <div className="md:w-1/4">
@@ -95,7 +95,7 @@ const CareerSection = ({ experiences }: CareerSectionProps) => {
           ))}
           
           {/* Other Experience */}
-          <div className="card card-hover animate-fade-in delay-300">
+          <div className="card animate-fade-in delay-300">
             <h3 className="text-xl font-bold text-[rgb(var(--accent-rgb))] mb-8">Other Experience</h3>
             
             <div className="space-y-12">

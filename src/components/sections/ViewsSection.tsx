@@ -12,7 +12,7 @@ const ViewsSection = () => {
         
         <div className="grid md:grid-cols-2 gap-10 mt-20">
           {/* AI and Software Development */}
-          <div className="card card-hover animate-fade-in">
+          <div className="card animate-fade-in">
             <h3 className="text-xl font-bold text-[rgb(var(--accent-rgb))] mb-6">AI and Software Development</h3>
             <div className="space-y-4 text-gray-300">
               <p>
@@ -28,7 +28,7 @@ const ViewsSection = () => {
           </div>
           
           {/* Social and Economic Justice */}
-          <div className="card card-hover animate-fade-in delay-100">
+          <div className="card animate-fade-in delay-100">
             <h3 className="text-xl font-bold text-[rgb(var(--accent-rgb))] mb-6">Social and Economic Justice</h3>
             <div className="space-y-4 text-gray-300">
               <p>

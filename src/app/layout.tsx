@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "David Bechara",
     images: [
       {
-        url: "/banner.svg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "David Bechara - Lead Frontend Developer"

@@ -12,7 +12,7 @@ const ContactSection = () => {
           subtitle="Interested in working together? Let&apos;s connect." 
         />
         
-        <div className="card card-hover max-w-3xl mx-auto mt-16 animate-fade-in">
+        <div className="card max-w-3xl mx-auto mt-16 animate-fade-in">
           <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-12">
             <div className="text-center md:text-left">
               <h3 className="text-xl font-bold text-[rgb(var(--accent-rgb))] mb-6">David Bechara</h3>
