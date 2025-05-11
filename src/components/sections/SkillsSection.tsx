@@ -16,12 +16,12 @@ const SkillBar = ({ name, level, score }: SkillBarProps) => {
   return (
     <div className="space-y-2">
       <div className="flex justify-between items-center">
-        <span className="text-[rgb(var(--foreground-rgb))] dark:text-gray-300">{name}</span>
-        <span className="text-xs text-[rgb(var(--muted-rgb))] dark:text-gray-500">{level}</span>
+        <span className="text-content dark:text-gray-300">{name}</span>
+        <span className="text-xs text-muted dark:text-gray-500">{level}</span>
       </div>
       <div className="h-1.5 w-full bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden border border-gray-300 dark:border-transparent">
         <div 
-          className="h-full bg-[rgb(var(--accent-rgb))] rounded-full" 
+          className="h-full bg-primary dark:bg-primary-dark rounded-full" 
           style={{ width: getWidthPercentage(score) }}
         ></div>
       </div>

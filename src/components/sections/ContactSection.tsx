@@ -15,26 +15,26 @@ const ContactSection = () => {
         <div className="card max-w-3xl mx-auto mt-16 animate-fade-in">
           <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-12">
             <div className="text-center md:text-left">
-              <h3 className="text-xl font-bold text-[rgb(var(--accent-rgb))] mb-6">David Bechara</h3>
-              <div className="space-y-4 text-gray-300">
+              <h3 className="text-xl font-bold text-primary dark:text-primary-dark mb-6">David Bechara</h3>
+              <div className="space-y-4 text-content dark:text-gray-300">
                 <div className="flex flex-col md:flex-row md:items-center gap-2">
-                  <span className="font-medium">Email:</span> 
-                  <a href="mailto:davbechara96@gmail.com" className="text-[rgb(var(--accent-rgb))] hover:underline">
+                  <span className="font-medium text-content dark:text-gray-200">Email:</span> 
+                  <a href="mailto:davbechara96@gmail.com" className="text-primary dark:text-primary-dark hover:underline">
                     davbechara96@gmail.com
                   </a>
                 </div>
                 <div className="flex flex-col md:flex-row md:items-center gap-2">
-                  <span className="font-medium">Phone:</span> 
-                  <a href="tel:+15149619291" className="text-[rgb(var(--accent-rgb))] hover:underline">
+                  <span className="font-medium text-content dark:text-gray-200">Phone:</span> 
+                  <a href="tel:+15149619291" className="text-primary dark:text-primary-dark hover:underline">
                     514 961 9291
                   </a>
                 </div>
                 <div className="flex flex-col md:flex-row md:items-center gap-2">
-                  <span className="font-medium">Location:</span> 
+                  <span className="font-medium text-content dark:text-gray-200">Location:</span> 
                   <span>Montreal, QC</span>
                 </div>
                 <div className="flex flex-col md:flex-row md:items-center gap-2">
-                  <span className="font-medium">Languages:</span> 
+                  <span className="font-medium text-content dark:text-gray-200">Languages:</span> 
                   <span>English, French</span>
                 </div>
               </div>

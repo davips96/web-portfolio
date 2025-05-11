@@ -13,8 +13,8 @@ const ViewsSection = () => {
         <div className="grid md:grid-cols-2 gap-10 mt-20">
           {/* AI and Software Development */}
           <div className="card animate-fade-in">
-            <h3 className="text-xl font-bold text-[rgb(var(--accent-rgb))] mb-6">AI and Software Development</h3>
-            <div className="space-y-4 text-[rgb(var(--foreground-rgb))] dark:text-gray-300">
+            <h3 className="text-xl font-bold text-primary dark:text-primary-dark mb-6">AI and Software Development</h3>
+            <div className="space-y-4 text-content dark:text-gray-300">
               <p>
                 The advent of AI is transforming software development rapidly. This very website was written by an AI agent under my supervision, demonstrating the collaborative future I envision for our industry.
               </p>
@@ -29,8 +29,8 @@ const ViewsSection = () => {
           
           {/* Social and Economic Justice */}
           <div className="card animate-fade-in delay-100">
-            <h3 className="text-xl font-bold text-[rgb(var(--accent-rgb))] mb-6">Social and Economic Justice</h3>
-            <div className="space-y-4 text-[rgb(var(--foreground-rgb))] dark:text-gray-300">
+            <h3 className="text-xl font-bold text-primary dark:text-primary-dark mb-6">Social and Economic Justice</h3>
+            <div className="space-y-4 text-content dark:text-gray-300">
               <p>
                 I believe strongly in human rights and social justice as foundational principles for a functioning society. The ongoing Gaza conflict has escalated into a humanitarian crisis that demands international attention and action.
               </p>

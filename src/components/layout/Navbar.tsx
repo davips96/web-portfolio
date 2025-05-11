@@ -42,8 +42,8 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-5 lg:px-8 flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold tracking-tight hover:text-[rgb(var(--accent-rgb))] transition-colors">
-          David<span className="text-[rgb(var(--accent-rgb))]">.</span>
+        <a href="#" className="text-2xl font-bold tracking-tight hover:text-primary dark:hover:text-primary-dark transition-colors">
+          David<span className="text-primary dark:text-primary-dark">.</span>
         </a>
         <div className="flex items-center gap-7">
           <div className="hidden md:flex items-center gap-7">
@@ -51,12 +51,12 @@ const Navbar = () => {
               <motion.a 
                 key={index}
                 href={link.href} 
-                className="text-sm font-medium relative text-[rgb(var(--muted-rgb))] hover:text-[rgb(var(--accent-rgb))] transition-colors"
+                className="text-sm font-medium relative text-muted dark:text-muted-dark hover:text-primary dark:hover:text-primary-dark transition-colors"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 {link.label}
-                <span className="absolute left-0 right-0 bottom-[-4px] h-[2px] bg-[rgb(var(--accent-rgb))] transform scale-x-0 transition-transform duration-300 ease-out origin-bottom-left hover:scale-x-100" />
+                <span className="absolute left-0 right-0 bottom-[-4px] h-[2px] bg-primary dark:bg-primary-dark transform scale-x-0 transition-transform duration-300 ease-out origin-bottom-left hover:scale-x-100" />
               </motion.a>
             ))}
           </div>

@@ -11,7 +11,7 @@ import { experiences, skillGroups, education } from "@/data/portfolio";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[rgb(var(--background-rgb))]">
+    <main className="flex min-h-screen flex-col bg-background dark:bg-background-dark">
       {/* Navigation */}
       <Navbar />
 

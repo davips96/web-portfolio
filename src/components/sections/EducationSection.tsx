@@ -11,7 +11,7 @@ const EducationCard = ({ education, delay }: EducationCardProps) => {
       className="card p-8 animate-fade-in" 
       style={{ animationDelay: `${delay}s` }}
     >
-      <h3 className="text-lg font-semibold mb-2 text-[rgb(var(--accent-rgb))]">{education.school}</h3>
+      <h3 className="text-lg font-semibold mb-2 text-primary dark:text-primary-dark">{education.school}</h3>
       <p className="text-gray-300 mb-1">{education.degree}</p>
       {education.period && (
         <p className="text-sm text-gray-500 mt-3">{education.period}</p>

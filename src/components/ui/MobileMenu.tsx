@@ -44,7 +44,7 @@ const MobileMenu = () => {
               <a
                 key={index}
                 href={link.href}
-                className="text-2xl font-medium text-gray-300 hover:text-[rgb(var(--accent-rgb))] transition-colors py-4"
+                className="text-2xl font-medium text-gray-300 hover:text-primary-dark transition-colors py-4"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
