@@ -5,11 +5,11 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative pt-32 pb-24 md:pt-36 md:pb-28 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Subtle gradient background */}
       <div className="absolute inset-0 hero-gradient opacity-70"></div>
 
-      <div className="container mx-auto px-5 lg:px-8 relative z-10">
+      <div className="container mx-auto px-5 lg:px-8 relative z-10 py-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           <div className="w-full md:w-2/3 animate-fade-in">
             <div className="inline-block text-sm font-medium px-3 py-1 rounded-full border border-[rgba(var(--accent-rgb),0.3)] text-[rgb(var(--accent-rgb))] mb-6">
