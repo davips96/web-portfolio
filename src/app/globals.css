@@ -142,7 +142,18 @@ body {
 }
 
 .card {
-  @apply bg-[rgb(var(--card-rgb))] rounded-xl border border-[rgba(var(--border-rgb),0.2)] p-6 transition-all duration-300;
+  @apply bg-[rgb(var(--card-rgb))] rounded-xl border border-[rgba(var(--border-rgb),0.2)] p-6 transition-all duration-300 relative;
+}
+
+/* Card accent line */
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0.5rem;
+  width: 140px;
+  height: 3px;
+  background-color: rgb(var(--accent-rgb));
 }
 
 .tag {

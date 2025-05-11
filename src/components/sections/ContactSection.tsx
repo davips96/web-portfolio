@@ -9,7 +9,7 @@ const ContactSection = () => {
       <div className="container mx-auto px-5 lg:px-8">
         <SectionTitle 
           title="Get In Touch" 
-          subtitle="Interested in working together? Let&apos;s connect." 
+          subtitle="Interested in working together? Let's connect." 
         />
         
         <div className="card max-w-3xl mx-auto mt-16 animate-fade-in">

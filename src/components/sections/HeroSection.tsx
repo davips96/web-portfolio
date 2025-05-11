@@ -16,7 +16,7 @@ const HeroSection = () => {
               Senior Software Engineer @ Sonder
             </div>
             <h1 className="hero-title mb-6">
-              Hi, I&apos;m <span className="text-[rgb(var(--accent-rgb))]">David Bechara</span>
+              Hi, I'm <span className="text-[rgb(var(--accent-rgb))]">David Bechara</span>
             </h1>
             <p className="text-body-lg text-[rgb(var(--muted-rgb))] mb-8 max-w-2xl">
               Enthusiastic and dynamic developer with 6 years of professional experience. Currently seeking a fresh
