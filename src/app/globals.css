@@ -15,23 +15,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-background/80 dark:bg-background-dark/80;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-primary/50 dark:bg-primary-dark/50 rounded-md;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary/70 dark:bg-primary-dark/70;
-}
-
 /* Typography */
 .hero-title {
   @apply text-4xl font-extrabold tracking-tight;
@@ -116,6 +99,11 @@ body {
 
 .card {
   @apply bg-card dark:bg-card-dark rounded-xl border border-border/20 dark:border-border-dark/20 p-6 transition-all duration-300 relative;
+}
+
+/* Apply shadow only in light mode */
+.light .card {
+  @apply shadow-lg;
 }
 
 /* Card accent line */

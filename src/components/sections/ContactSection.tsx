@@ -12,7 +12,7 @@ const ContactSection = () => {
           subtitle="Interested in working together? Let's connect." 
         />
         
-        <div className="card max-w-3xl mx-auto mt-16 animate-fade-in shadow-lg rounded-xl p-8">
+        <div className="card max-w-3xl mx-auto mt-16 animate-fade-in rounded-xl p-8">
           <h3 className="text-xl font-bold text-primary dark:text-primary-dark mb-4">David Bechara</h3>
           
           <div className="flex flex-col md:flex-row justify-between">
