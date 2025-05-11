@@ -6,69 +6,78 @@ type ExperienceCardProps = {
 };
 
 const ExperienceCard = ({ experience, delay }: ExperienceCardProps) => {
+  // Format period display
+  const periodDisplay = experience.end 
+    ? `${experience.start} - ${experience.end}` 
+    : `Since ${experience.start}`;
+
   return (
     <div className="card animate-fade-in" style={{ animationDelay: `${delay}s` }}>
-      <div className="flex flex-col md:flex-row gap-10">
+      <div className="flex flex-col md:flex-row gap-8">
         {/* Company Info */}
         <div className="md:w-1/4">
-          <h3 className="text-xl font-bold text-[rgb(var(--accent-rgb))]">{experience.company}</h3>
-          <p className="text-gray-500 mt-1 mb-2">{experience.period}</p>
-          <p className="text-sm text-gray-400">{experience.type}</p>
+          <h3 className="text-xl font-bold text-primary dark:text-primary-dark">{experience.title}</h3>
+          <p className="text-muted dark:text-muted-dark mt-1 mb-1">{periodDisplay}</p>
+          {experience.type && <p className="text-sm text-muted dark:text-muted-dark mt-1">{experience.type}</p>}
         </div>
         
         {/* Role Details */}
         <div className="md:w-3/4">
-          {/* Position */}
-          {Array.isArray(experience.position) ? (
-            experience.position.map((pos, idx) => (
-              <h4 key={idx} className="text-lg font-semibold mb-2">{pos}</h4>
-            ))
-          ) : (
+          {/* Primary Position */}
+          {experience.position && (
             <h4 className="text-lg font-semibold mb-3">{experience.position}</h4>
           )}
           
-          {/* Responsibilities */}
-          <div className="space-y-4 mb-8">
-            {experience.description.map((item, idx) => (
-              <div key={idx} className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full mt-2 bg-[rgb(var(--accent-rgb))]"></div>
-                <p className="text-gray-300">{item}</p>
-              </div>
-            ))}
-          </div>
-          
-          {/* Tech Stack */}
-          <div>
-            <h5 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-3">Technologies</h5>
-            <div className="flex flex-wrap gap-2">
-              {experience.tech.map((tech, idx) => (
-                <span key={idx} className="tag">{tech}</span>
+          {/* Main Description (if exists and should be displayed) */}
+          {experience.description && experience.description.length > 0 && (
+            <div className="space-y-1.5 mb-6">
+              {experience.description.map((item, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full mt-2 bg-primary dark:bg-primary-dark"></div>
+                  <p className="text-content dark:text-gray-300">{item}</p>
+                </div>
               ))}
             </div>
-          </div>
+          )}
+          
+          {/* Render roles */}
+          {experience.roles.map((role, roleIndex) => (
+            <div key={roleIndex} className={roleIndex !== experience.roles.length - 1 ? "mb-6" : ""}>
+              {/* If single role and no position defined at parent level, or if multiple roles */}
+              {(experience.roles.length > 1 || (!experience.position && experience.roles.length === 1)) && (
+                <>
+                  <h4 className="text-lg font-semibold mb-1">{role.title}</h4>
+                  <p className="text-muted dark:text-muted-dark mb-3">{role.start} - {role.end}</p>
+                  {role.position && <p className="text-sm font-medium text-content dark:text-gray-300 mb-1">{role.position}</p>}
+                  {role.type && <p className="text-sm text-muted dark:text-muted-dark mt-1 mb-3">{role.type}</p>}
+                </>
+              )}
+              
+              {role.description && role.description.length > 0 && (
+                <div className="space-y-1.5 mb-4">
+                  {role.description.map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full mt-2 bg-primary dark:bg-primary-dark"></div>
+                      <p className="text-content dark:text-gray-300">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+          
+          {/* Tech Stack */}
+          {experience.tech && experience.tech.length > 0 && (
+            <div className="mt-5">
+              <h5 className="text-sm font-semibold uppercase tracking-wider text-muted dark:text-muted-dark mb-2">Technologies</h5>
+              <div className="flex flex-wrap gap-0.5">
+                {experience.tech.map((tech, idx) => (
+                  <span key={idx} className="tag">{tech}</span>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
-      </div>
-    </div>
-  );
-};
-
-type OtherExperienceProps = {
-  title: string;
-  period: string;
-  description: string;
-  role: string;
-};
-
-const OtherExperienceItem = ({ title, period, description, role }: OtherExperienceProps) => {
-  return (
-    <div className="flex flex-col md:flex-row gap-8">
-      <div className="md:w-1/4">
-        <p className="text-gray-500">{period}</p>
-      </div>
-      <div className="md:w-3/4">
-        <h4 className="text-lg font-semibold">{title}</h4>
-        <p className="text-gray-400 mb-2">{description}</p>
-        <p className="text-sm text-gray-300">{role}</p>
       </div>
     </div>
   );
@@ -80,12 +89,12 @@ type CareerSectionProps = {
 
 const CareerSection = ({ experiences }: CareerSectionProps) => {
   return (
-    <section id="career" className="py-20 lg:py-32">
+    <section id="career" className="py-16 lg:py-24">
       <div className="container mx-auto px-5 lg:px-8">
         <h2 className="section-title">Career Journey</h2>
         <p className="section-subtitle">My professional experience in software development and leadership.</p>
         
-        <div className="space-y-16 mt-20">
+        <div className="space-y-12 mt-14">
           {experiences.map((exp, index) => (
             <ExperienceCard 
               key={index} 
@@ -93,27 +102,6 @@ const CareerSection = ({ experiences }: CareerSectionProps) => {
               delay={0.1 + index * 0.1} 
             />
           ))}
-          
-          {/* Other Experience */}
-          <div className="card animate-fade-in delay-300">
-            <h3 className="text-xl font-bold text-[rgb(var(--accent-rgb))] mb-8">Other Experience</h3>
-            
-            <div className="space-y-12">
-              <OtherExperienceItem
-                title="Nuance"
-                period="Sep 2019 - Apr 2020"
-                description="Software Solutions (Capstone Project)"
-                role="Full Stack Developer"
-              />
-              
-              <OtherExperienceItem
-                title="CTC Vision Inc."
-                period="Feb 2019 - Aug 2019"
-                description="Eyewear Laboratory"
-                role="Full Stack Developer"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </section>

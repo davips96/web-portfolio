@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div>
             <p className="text-lg font-semibold">
-              David<span className="text-[rgb(var(--accent-rgb))]">.</span>
+              David<span className="text-primary dark:text-primary-dark">.</span>
             </p>
             <p className="text-sm text-gray-500 mt-2">
               © {new Date().getFullYear()} David Bechara. All rights reserved.

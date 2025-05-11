@@ -9,41 +9,43 @@ const ContactSection = () => {
       <div className="container mx-auto px-5 lg:px-8">
         <SectionTitle 
           title="Get In Touch" 
-          subtitle="Interested in working together? Let&apos;s connect." 
+          subtitle="Interested in working together? Let's connect." 
         />
         
-        <div className="card max-w-3xl mx-auto mt-16 animate-fade-in">
-          <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-12">
-            <div className="text-center md:text-left">
-              <h3 className="text-xl font-bold text-[rgb(var(--accent-rgb))] mb-6">David Bechara</h3>
-              <div className="space-y-4 text-gray-300">
-                <div className="flex flex-col md:flex-row md:items-center gap-2">
-                  <span className="font-medium">Email:</span> 
-                  <a href="mailto:davbechara96@gmail.com" className="text-[rgb(var(--accent-rgb))] hover:underline">
+        <div className="card max-w-3xl mx-auto mt-16 animate-fade-in rounded-xl p-8">
+          <h3 className="text-xl font-bold text-primary dark:text-primary-dark mb-4">David Bechara</h3>
+          
+          <div className="flex flex-col md:flex-row justify-between">
+            <div className="md:flex-1">
+              <div className="grid gap-0 text-content dark:text-gray-300">
+                <div className="leading-none">
+                  <span className="text-sm font-semibold uppercase tracking-wider text-muted dark:text-muted-dark mr-2">Email:</span> 
+                  <a href="mailto:davbechara96@gmail.com" className="text-primary dark:text-primary-dark hover:underline">
                     davbechara96@gmail.com
                   </a>
                 </div>
-                <div className="flex flex-col md:flex-row md:items-center gap-2">
-                  <span className="font-medium">Phone:</span> 
-                  <a href="tel:+15149619291" className="text-[rgb(var(--accent-rgb))] hover:underline">
+                <div className="leading-none mt-1.5">
+                  <span className="text-sm font-semibold uppercase tracking-wider text-muted dark:text-muted-dark mr-2">Phone:</span> 
+                  <a href="tel:+15149619291" className="text-primary dark:text-primary-dark hover:underline">
                     514 961 9291
                   </a>
                 </div>
-                <div className="flex flex-col md:flex-row md:items-center gap-2">
-                  <span className="font-medium">Location:</span> 
+                <div className="leading-none mt-1.5">
+                  <span className="text-sm font-semibold uppercase tracking-wider text-muted dark:text-muted-dark mr-2">Location:</span> 
                   <span>Montreal, QC</span>
                 </div>
-                <div className="flex flex-col md:flex-row md:items-center gap-2">
-                  <span className="font-medium">Languages:</span> 
+                <div className="leading-none mt-1.5">
+                  <span className="text-sm font-semibold uppercase tracking-wider text-muted dark:text-muted-dark mr-2">Languages:</span> 
                   <span>English, French</span>
                 </div>
               </div>
             </div>
             
-            <div className="flex flex-col gap-4 w-full md:w-auto">
+            <div className="mt-6 md:mt-0 md:ml-8 flex flex-row md:flex-col gap-4">
               <Button 
                 href="mailto:davbechara96@gmail.com" 
                 variant="primary"
+                className="flex-1 md:flex-auto"
               >
                 <FiMail className="w-5 h-5" />
                 Email Me
@@ -52,6 +54,7 @@ const ContactSection = () => {
                 href="/david-bechara-vcard.vcf" 
                 variant="secondary"
                 download
+                className="flex-1 md:flex-auto"
               >
                 <FiDownload className="w-5 h-5" />
                 Download Contact

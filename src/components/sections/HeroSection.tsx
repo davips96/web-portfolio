@@ -5,20 +5,20 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative pt-32 pb-24 md:pt-36 md:pb-28 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Subtle gradient background */}
       <div className="absolute inset-0 hero-gradient opacity-70"></div>
 
-      <div className="container mx-auto px-5 lg:px-8 relative z-10">
+      <div className="container mx-auto px-5 lg:px-8 relative z-10 py-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           <div className="w-full md:w-2/3 animate-fade-in">
-            <div className="inline-block text-sm font-medium px-3 py-1 rounded-full border border-[rgba(var(--accent-rgb),0.3)] text-[rgb(var(--accent-rgb))] mb-6">
+            <div className="inline-block text-sm font-medium px-3 py-1 rounded-full border border-primary/30 dark:border-primary-dark/30 text-primary dark:text-primary-dark mb-6">
               Senior Software Engineer @ Sonder
             </div>
             <h1 className="hero-title mb-6">
-              Hi, I&apos;m <span className="text-[rgb(var(--accent-rgb))]">David Bechara</span>
+              Hi, I'm <span className="text-primary dark:text-primary-dark">David Bechara</span>
             </h1>
-            <p className="text-body-lg text-[rgb(var(--muted-rgb))] mb-8 max-w-2xl">
+            <p className="text-body-lg text-muted dark:text-muted-dark mb-8 max-w-2xl">
               Enthusiastic and dynamic developer with 6 years of professional experience. Currently seeking a fresh
               start to grow into a director of software.
             </p>
@@ -41,9 +41,9 @@ const HeroSection = () => {
 
           <div className="w-full md:w-1/3 flex justify-center md:justify-end animate-fade-in delay-200 mt-8 md:mt-0">
             <div className="relative w-[180px] h-[180px] md:w-[220px] md:h-[220px]">
-              <div className="absolute w-full h-full rounded-lg rotate-6 bg-[rgba(var(--secondary-rgb),0.1)] border border-[rgba(var(--secondary-rgb),0.2)]"></div>
-              <div className="absolute w-full h-full rounded-lg -rotate-6 bg-[rgba(var(--tertiary-rgb),0.1)] border border-[rgba(var(--tertiary-rgb),0.2)]"></div>
-              <div className="relative w-full h-full rounded-lg overflow-hidden border-2 border-[rgba(var(--accent-rgb),0.2)] bg-[rgb(var(--card-rgb))] shadow-lg z-10">
+              <div className="absolute w-full h-full rounded-lg rotate-6 bg-secondary/10 dark:bg-secondary-dark/10 border border-secondary/20 dark:border-secondary-dark/20"></div>
+              <div className="absolute w-full h-full rounded-lg -rotate-6 bg-tertiary/10 dark:bg-tertiary-dark/10 border border-tertiary/20 dark:border-tertiary-dark/20"></div>
+              <div className="relative w-full h-full rounded-lg overflow-hidden border-2 border-primary/20 dark:border-primary-dark/20 bg-card dark:bg-card-dark shadow-lg z-10">
                 <Image
                   src="https://davidbechara--web-portfolio.s3.us-east-1.amazonaws.com/profile.jpeg"
                   alt="David Bechara"

@@ -1,7 +1,8 @@
 import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
 import CareerSection from "@/components/sections/CareerSection";
-import SkillsAndEducation from "@/components/sections/SkillsAndEducation";
+import EducationSection from "@/components/sections/EducationSection";
+import SkillsSection from "@/components/sections/SkillsSection";
 import ViewsSection from "@/components/sections/ViewsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/layout/Footer";
@@ -10,7 +11,7 @@ import { experiences, skillGroups, education } from "@/data/portfolio";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[rgb(var(--background-rgb))]">
+    <main className="flex min-h-screen flex-col bg-background dark:bg-background-dark">
       {/* Navigation */}
       <Navbar />
 
@@ -22,8 +23,13 @@ export default function Home() {
 
       <Divider />
 
-      {/* Skills & Education Section */}
-      <SkillsAndEducation skillGroups={skillGroups} education={education} />
+      {/* Education Section */}
+      <EducationSection education={education} />
+      
+      <Divider />
+
+      {/* Skills Section */}
+      <SkillsSection skillGroups={skillGroups} />
       
       <Divider />
 
