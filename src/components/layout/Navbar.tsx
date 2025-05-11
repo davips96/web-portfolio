@@ -45,13 +45,16 @@ const Navbar = () => {
         <a href="#" className="text-2xl font-bold tracking-tight hover:text-primary dark:hover:text-primary-dark transition-colors">
           David<span className="text-primary dark:text-primary-dark">.</span>
         </a>
-        <div className="flex items-center gap-7">
-          <div className="hidden md:flex items-center gap-7">
+        
+        {/* Navigation and Tools */}
+        <div className="flex items-center space-x-5">
+          {/* Desktop Navigation Links */}
+          <div className="hidden md:flex items-center space-x-7">
             {links.map((link, index) => (
               <motion.a 
                 key={index}
                 href={link.href} 
-                className="text-sm font-medium relative text-muted dark:text-muted-dark hover:text-primary dark:hover:text-primary-dark transition-colors"
+                className="text-sm font-medium relative text-content dark:text-content-dark hover:text-primary dark:hover:text-primary-dark transition-colors"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
@@ -60,7 +63,9 @@ const Navbar = () => {
               </motion.a>
             ))}
           </div>
-          <div className="flex items-center gap-5">
+          
+          {/* Theme Toggle and Mobile Menu */}
+          <div className="flex items-center space-x-1">
             <ThemeToggle />
             <MobileMenu />
           </div>
