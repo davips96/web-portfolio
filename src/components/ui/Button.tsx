@@ -34,16 +34,18 @@ const Button = ({
   // Variant styles
   const variantStyles = {
     primary: `bg-[rgb(var(--accent-rgb))] text-white hover:translate-y-[-2px] hover:shadow-md 
-              hover:shadow-[rgba(var(--accent-rgb),0.3)] active:translate-y-0 active:shadow-none`,
+              hover:shadow-[rgba(var(--accent-rgb),0.3)] active:translate-y-0 active:shadow-none
+              border border-[rgba(var(--accent-rgb),0.7)]`,
     
-    secondary: `bg-[rgba(var(--accent-rgb),0.1)] text-[rgb(var(--accent-rgb))] 
-                hover:bg-[rgba(var(--accent-rgb),0.15)] active:bg-[rgba(var(--accent-rgb),0.2)]`,
+    secondary: `bg-[rgba(var(--accent-rgb),0.15)] text-[rgb(var(--foreground-rgb))] 
+                hover:bg-[rgba(var(--accent-rgb),0.2)] active:bg-[rgba(var(--accent-rgb),0.25)]
+                border border-[rgba(var(--accent-rgb),0.3)]`,
     
-    outline: `bg-transparent border border-[rgba(var(--accent-rgb),0.5)] text-[rgb(var(--accent-rgb))] 
+    outline: `bg-transparent border border-[rgba(var(--accent-rgb),0.6)] text-[rgb(var(--foreground-rgb))] 
               hover:border-[rgb(var(--accent-rgb))] hover:bg-[rgba(var(--accent-rgb),0.05)]`,
     
-    text: `bg-transparent text-[rgb(var(--accent-rgb))] hover:bg-[rgba(var(--accent-rgb),0.05)] 
-           px-2 py-1 rounded-md`
+    text: `bg-transparent text-[rgb(var(--foreground-rgb))] hover:bg-[rgba(var(--accent-rgb),0.1)] 
+           px-2 py-1 rounded-md border-b border-[rgba(var(--accent-rgb),0.3)]`
   };
   
   const buttonClasses = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;

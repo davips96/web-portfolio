@@ -17,8 +17,8 @@ const ExperienceCard = ({ experience, delay }: ExperienceCardProps) => {
         {/* Company Info */}
         <div className="md:w-1/4">
           <h3 className="text-xl font-bold text-[rgb(var(--accent-rgb))]">{experience.title}</h3>
-          <p className="text-gray-500 mt-1 mb-1">{periodDisplay}</p>
-          {experience.type && <p className="text-sm text-gray-400 mt-1">{experience.type}</p>}
+          <p className="text-[rgb(var(--muted-rgb))] mt-1 mb-1">{periodDisplay}</p>
+          {experience.type && <p className="text-sm text-[rgb(var(--muted-rgb))] mt-1">{experience.type}</p>}
         </div>
         
         {/* Role Details */}
@@ -34,7 +34,7 @@ const ExperienceCard = ({ experience, delay }: ExperienceCardProps) => {
               {experience.description.map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full mt-2 bg-[rgb(var(--accent-rgb))]"></div>
-                  <p className="text-gray-300">{item}</p>
+                  <p className="text-[rgb(var(--foreground-rgb))] dark:text-gray-300">{item}</p>
                 </div>
               ))}
             </div>
@@ -47,9 +47,9 @@ const ExperienceCard = ({ experience, delay }: ExperienceCardProps) => {
               {(experience.roles.length > 1 || (!experience.position && experience.roles.length === 1)) && (
                 <>
                   <h4 className="text-lg font-semibold mb-1">{role.title}</h4>
-                  <p className="text-gray-500 mb-3">{role.start} - {role.end}</p>
-                  {role.position && <p className="text-sm font-medium text-gray-300 mb-1">{role.position}</p>}
-                  {role.type && <p className="text-sm text-gray-400 mt-1 mb-3">{role.type}</p>}
+                  <p className="text-[rgb(var(--muted-rgb))] mb-3">{role.start} - {role.end}</p>
+                  {role.position && <p className="text-sm font-medium text-[rgb(var(--foreground-rgb))] dark:text-gray-300 mb-1">{role.position}</p>}
+                  {role.type && <p className="text-sm text-[rgb(var(--muted-rgb))] mt-1 mb-3">{role.type}</p>}
                 </>
               )}
               
@@ -58,7 +58,7 @@ const ExperienceCard = ({ experience, delay }: ExperienceCardProps) => {
                   {role.description.map((item, idx) => (
                     <div key={idx} className="flex items-start gap-3">
                       <div className="w-1.5 h-1.5 rounded-full mt-2 bg-[rgb(var(--accent-rgb))]"></div>
-                      <p className="text-gray-300">{item}</p>
+                      <p className="text-[rgb(var(--foreground-rgb))] dark:text-gray-300">{item}</p>
                     </div>
                   ))}
                 </div>
@@ -69,7 +69,7 @@ const ExperienceCard = ({ experience, delay }: ExperienceCardProps) => {
           {/* Tech Stack */}
           {experience.tech && experience.tech.length > 0 && (
             <div className="mt-5">
-              <h5 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-2">Technologies</h5>
+              <h5 className="text-sm font-semibold uppercase tracking-wider text-[rgb(var(--muted-rgb))] mb-2">Technologies</h5>
               <div className="flex flex-wrap gap-0.5">
                 {experience.tech.map((tech, idx) => (
                   <span key={idx} className="tag">{tech}</span>

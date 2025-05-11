@@ -3,6 +3,17 @@
 @tailwind utilities;
 
 :root {
+  --foreground-rgb: 30, 30, 30;
+  --background-rgb: 250, 250, 250;
+  --accent-rgb: 0, 179, 170;
+  --secondary-rgb: 124, 58, 237;
+  --tertiary-rgb: 240, 82, 0;
+  --muted-rgb: 75, 85, 99;
+  --card-rgb: 255, 255, 255;
+  --border-rgb: 209, 213, 219;
+}
+
+.dark {
   --foreground-rgb: 230, 230, 230;
   --background-rgb: 10, 10, 10;
   --accent-rgb: 0, 199, 190;
@@ -13,16 +24,16 @@
   --border-rgb: 38, 38, 38;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: 10, 10, 10;
-    --background-rgb: 250, 250, 250;
-    --accent-rgb: 0, 179, 170;
-    --secondary-rgb: 124, 58, 237;
-    --tertiary-rgb: 240, 82, 0;
-    --muted-rgb: 107, 114, 128;
-    --card-rgb: 255, 255, 255;
-    --border-rgb: 229, 231, 235;
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --foreground-rgb: 230, 230, 230;
+    --background-rgb: 10, 10, 10;
+    --accent-rgb: 0, 199, 190;
+    --secondary-rgb: 138, 92, 246;
+    --tertiary-rgb: 255, 122, 0;
+    --muted-rgb: 163, 163, 163;
+    --card-rgb: 18, 18, 18;
+    --border-rgb: 38, 38, 38;
   }
 }
 
@@ -157,7 +168,11 @@ body {
 }
 
 .tag {
-  @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium bg-gray-800 text-gray-100 mr-2 mb-2;
+  @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium bg-gray-800 text-gray-100 dark:bg-gray-800 dark:text-gray-100 mr-2 mb-2 border border-gray-300 dark:border-transparent;
+}
+
+.light .tag {
+  @apply bg-gray-200 text-gray-800;
 }
 
 /* Animation */
