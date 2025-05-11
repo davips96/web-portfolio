@@ -35,7 +35,7 @@ const ViewsSection = () => {
                 I believe strongly in human rights and social justice as foundational principles for a functioning society. The ongoing Gaza conflict has escalated into a humanitarian crisis that demands international attention and action.
               </p>
               <p>
-                I'm concerned about the rise of right-wing politics that claim to support working people while implementing policies that primarily benefit large corporations and wealthy individuals. As a proponent of Keynesian economics, I believe government spending during economic downturns can stimulate growth and provide essential services.
+                I&apos;m concerned about the rise of right-wing politics that claim to support working people while implementing policies that primarily benefit large corporations and wealthy individuals. As a proponent of Keynesian economics, I believe government spending during economic downturns can stimulate growth and provide essential services.
               </p>
               <p>
                 Governments must be held accountable for providing robust social services, healthcare, education, and infrastructure that benefit all citizens, not just the privileged few. Economic policies should reduce inequality rather than exacerbate it.

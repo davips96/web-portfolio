@@ -64,7 +64,7 @@ const SkillsSection = ({ skillGroups }: SkillsSectionProps) => {
     <section className="py-20 lg:py-32">
       <div className="container mx-auto px-5 lg:px-8">
         <h2 className="section-title">Skills</h2>
-        <p className="section-subtitle">Technical and soft skills I've mastered over the years.</p>
+        <p className="section-subtitle">Technical and soft skills I&apos;ve mastered over the years.</p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {skillGroups.map((group, index) => (
