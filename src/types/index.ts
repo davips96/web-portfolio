@@ -6,6 +6,16 @@ export type Experience = {
   position: string | string[];
   description: string[];
   tech: string[];
+  duration?: {
+    start: string;
+    end: string;
+  };
+  previousRole?: {
+    title: string;
+    start: string;
+    end: string;
+    description: string[];
+  };
 };
 
 // Skill type definitions

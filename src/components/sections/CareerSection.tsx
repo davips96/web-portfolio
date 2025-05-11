@@ -24,7 +24,12 @@ const ExperienceCard = ({ experience, delay }: ExperienceCardProps) => {
               <h4 key={idx} className="text-lg font-semibold mb-2">{pos}</h4>
             ))
           ) : (
-            <h4 className="text-lg font-semibold mb-3">{experience.position}</h4>
+            <>
+              <h4 className="text-lg font-semibold mb-3">{experience.position}</h4>
+              {experience.duration && (
+                <p className="text-gray-500 mb-4">{experience.duration.start} - {experience.duration.end}</p>
+              )}
+            </>
           )}
           
           {/* Responsibilities */}
@@ -36,6 +41,23 @@ const ExperienceCard = ({ experience, delay }: ExperienceCardProps) => {
               </div>
             ))}
           </div>
+          
+          {/* Previous Role (if exists) */}
+          {experience.previousRole && (
+            <div className="mb-8">
+              <h4 className="text-lg font-semibold mb-3">{experience.previousRole.title}</h4>
+              <p className="text-gray-500 mb-4">{experience.previousRole.start} - {experience.previousRole.end}</p>
+              
+              <div className="space-y-4 mb-8">
+                {experience.previousRole.description.map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full mt-2 bg-[rgb(var(--accent-rgb))]"></div>
+                    <p className="text-gray-300">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
           
           {/* Tech Stack */}
           <div>
